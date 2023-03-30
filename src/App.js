@@ -5,14 +5,20 @@ import { useState } from "react";
 function App() {
   const[count ,setCount]= useState(0);
 
-  const handleClick = () =>{
+  const handleAdd= () =>{
     setCount(count + 1);
+  }
+  const handleSubtract= () =>{
+    setCount(count - 1);
   }
   return (
     <div>
       <div>count:{count}</div>
       <div>
-        <button onClick = {handleClick}>Count-Me</button>
+        <button class="button is-primary is-rounded" onClick = {handleAdd}>AddNumber</button>
+      </div>
+      <div>
+        <button class="button is-primary is-rounded" onClick = {handleSubtract}>SubtractNumber</button>
       </div>
     </div>
   );
